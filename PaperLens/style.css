@@ -1,0 +1,285 @@
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #25334a;
+    line-height: 1.6;
+}
+
+/* 顶部导航栏 */
+.header {
+    height: 72px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2864d7;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #526078;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #2864d7;
+}
+
+/* 主体区域 */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 首页标题 */
+.hero {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #1d3154;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #78869b;
+    font-size: 16px;
+}
+
+/* 分析输入区域 */
+.analyzer {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(40, 75, 130, 0.06);
+}
+
+.analyzer h2,
+.results h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #253b60;
+}
+
+.analyzer > p {
+    font-size: 14px;
+    color: #8491a5;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 220px;
+    resize: vertical;
+    padding: 18px;
+    border: 1px solid #dce4ef;
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.8;
+    transition: 0.2s;
+}
+
+textarea:focus {
+    border-color: #4380e8;
+    box-shadow: 0 0 0 3px rgba(67, 128, 232, 0.1);
+}
+
+.input-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    font-size: 13px;
+    color: #8996a9;
+}
+
+/* 分析按钮 */
+button {
+    width: 150px;
+    height: 45px;
+    background: #2864d7;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #174eb8;
+    transform: translateY(-1px);
+}
+
+/* 分析结果区域 */
+.results {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding-bottom: 50px;
+}
+
+.results h2 {
+    grid-column: 1 / -1;
+}
+
+.result-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    min-height: 130px;
+    box-shadow: 0 4px 18px rgba(40, 75, 130, 0.04);
+}
+
+.result-card h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #31517f;
+}
+
+.result-card p {
+    font-size: 14px;
+    color: #7b8798;
+}
+
+/* 页面底部 */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #ffffff;
+    color: #929eaf;
+    font-size: 13px;
+}
+
+/* 手机屏幕适配 */
+@media (max-width: 700px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .analyzer {
+        padding: 20px;
+    }
+
+    .results {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 关键词标签 */
+.keyword-tag {
+    display: inline-block;
+    background: #eaf1ff;
+    color: #2864d7;
+    padding: 7px 13px;
+    margin: 5px 7px 5px 0;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 历史记录区域 */
+.history {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 45px;
+    box-shadow: 0 5px 25px rgba(40, 75, 130, 0.05);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.history-header h2 {
+    font-size: 22px;
+    color: #253b60;
+}
+
+.clear-btn {
+    width: auto;
+    height: auto;
+    padding: 8px 15px;
+    background: #fff0f0;
+    color: #d9534f;
+    font-size: 13px;
+}
+
+.clear-btn:hover {
+    background: #ffe0e0;
+}
+
+.history-item {
+    padding: 18px;
+    border: 1px solid #e6edf5;
+    border-radius: 9px;
+    margin-bottom: 12px;
+}
+
+.history-item h3 {
+    font-size: 16px;
+    color: #31517f;
+    margin-bottom: 8px;
+}
+
+.history-item p {
+    font-size: 13px;
+    color: #8491a5;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.empty-history {
+    color: #8996a9;
+    font-size: 14px;
+}
